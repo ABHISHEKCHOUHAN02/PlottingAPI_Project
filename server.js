@@ -16,10 +16,10 @@ const agentsRoutes = require('./routes/agentsRoutes');
 
 // Mount routes
 app.use('/api/plotting', plottingRoutes);
-app.use('/api/plotting', plotsRoutes);
-app.use('/api/plotting', amenitiesRoutes);
-app.use('/api/plotting', mediaRoutes);
-app.use('/api/plotting', proximityRoutes);
+app.use('/api/plots', plotsRoutes);
+app.use('/api/amenities', amenitiesRoutes);
+app.use('/api/media', mediaRoutes);
+app.use('/api/proximity', proximityRoutes);
 app.use('/api/agents', agentsRoutes);
 
 // Default route
