@@ -7,9 +7,7 @@ const { plotting } = require('../models/plotting');
 const createPlottingScheme = async (req, res) => {
   try {
     const data = req.body;
-    const exists = await db.select().from(plotting).where(eq(plotting.id, data.id));
-    if (exists.length > 0) return res.status(400).json({ error: 'ID already exists' });
-
+    
     const result = await db.insert(plotting).values({
       ...data,
       created_at: new Date(),
